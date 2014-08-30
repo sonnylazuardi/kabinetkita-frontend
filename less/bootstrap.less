@@ -1,0 +1,307 @@
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset
+@import "normalize.less";
+@import "print.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "glyphicons.less";
+@import "dropdowns.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+/* Functions */
+
+.heading-make {
+  font-family: 'MontserratFont', Arial;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.logo-make(@size, @margin, @image) {
+  background: url(@image) no-repeat;
+  width: @size;
+  height: @size;
+  margin: @margin;
+}
+
+.font-make(@name, @size) {
+  font-family: @name;
+  font-style: normal;
+  font-weight: @size;
+}
+
+.img-block {
+  background-size: contain;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* End Functions */
+
+/* latin-ext */
+@font-face {
+  .font-make('Lato', 400);
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  .font-make('Lato', 400);
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  .font-make('MontserratFont', 400);
+  src: local('Montserrat-Regular'), url('../fonts/montserrat.woff2') format('woff2'), url('../fonts/montserrat.woff') format('woff');
+}
+
+@font-face {
+  .font-make('MontserratFont', 700);
+  src: local('Montserrat-Bold'), url('../fonts/montserrat2.woff2') format('woff2'), url('../fonts/montserrat2.woff') format('woff');
+}
+
+body {
+  font-family: 'Lato', Arial;  
+}
+
+h1, h2, h3 {
+  .heading-make;
+}
+
+.logo {
+  .logo-make(125px, 0, '../img/logo.png');
+}
+
+.logo-home {
+  .logo-make(48px, 0 auto, '../img/home.png');
+}
+
+.logo-kementrian {
+  .logo-make(48px, 0 auto, '../img/kementrian.png');
+}
+
+.logo-kandidat {
+  .logo-make(48px, 0 auto, '../img/kandidat.png');
+}
+
+.logo-login {
+  .logo-make(48px, 0 auto, '../img/login.png');
+}
+
+.logo-kita {
+  background: url('../img/kabinetkita.png') no-repeat;
+  width: 369px;
+  height: 60px;
+}
+.logo-istana {
+  background: url('../img/istana.png') no-repeat;
+  width: 100%;
+  height: 187px;
+  background-size: contain;
+  margin-top: 30px;
+}
+
+.navbar-default {
+  li > a {
+    .heading-make;
+
+    div {
+      float: left;
+      margin-right: 10px; 
+      margin-top: -10px;    
+    }
+  }
+
+  .navbar-brand {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-default li > a > div {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    margin-top: -7px;
+  }
+}
+
+.heading {
+  background: @navbar-default-bg;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.box {
+  padding: 20px;
+}
+
+.content {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.footer {
+  .heading-make;
+  background: @navbar-default-bg;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.drop-kementrian {
+  padding: 20px;
+  .heading-make;
+  font-size: 1.6em;
+  color: @navbar-default-bg;
+  background: @body-bg;
+}
+
+.img-kominfo {
+  .logo-make(40px, inherit, '../img/kementrian/kominfo.png');
+  .img-block;
+}
+
+.select-kementrian {
+  float: right;
+}
+
+.tutorial {
+  padding: 40px;
+  p {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+}
+
+.indikasi(@color) {
+  border: 5px solid @color;
+}
+.indikasi-1 {
+  .indikasi(#000);
+}
+.indikasi-2 {
+  .indikasi(#666);
+}
+.indikasi-3 {
+  .indikasi(#999);
+}
+.indikasi-4 {
+  .indikasi(#ddd);
+}
+
+.indikasi-contoh {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.indikasi-contoh-1 {
+  .indikasi-contoh;
+  .indikasi(#000);
+}
+
+.indikasi-contoh-2 {
+  .indikasi-contoh;
+  .indikasi(#666);
+}
+
+.indikasi-contoh-3 {
+  .indikasi-contoh;
+  .indikasi(#999);
+}
+
+.indikasi-contoh-4 {
+  .indikasi-contoh;
+  .indikasi(#ddd);
+}
+
+@overview-height: 350px;
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.list-menteri {
+  margin-top: 10px;
+  .items {
+    display: block;
+    min-height: 380px;
+  }
+  .item-menteri {
+    .wrap-info {
+      padding: 20px;
+      background: @body-bg;
+    }
+    .judul {
+      .heading-make;
+      font-size: 1.3em;
+    }
+    .deskripsi {
+      margin-bottom: 10px;
+    }
+    .img-small-menteri {
+      width: 100%;
+      height: @overview-height;
+      background-size: cover;
+      height: 150px;
+    }
+    .img-menteri {
+      width: 100%;
+      height: @overview-height;
+      background-size: cover;
+      .overview {
+        background: rgba(0,0,0,.5);
+        padding: 20px;
+        height: @overview-height;
+        color: #fff;
+        .judul {
+          .heading-make;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
