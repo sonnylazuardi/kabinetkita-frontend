@@ -11,5 +11,5 @@ gulp.task('build-less', function(){
 });
 
 gulp.task('watch', function() {
-  	gulp.watch('./style.less', ['build-less']);
+  	gulp.watch('./*.less', ['build-less']);
 });

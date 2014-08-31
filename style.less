@@ -2,6 +2,8 @@
 @import "less/bootstrap.less";
 @import "variables.less";
 
+@import "sidemenu.less";
+
 .heading-make {
   font-family: 'MontserratFont', Arial;
   text-transform: uppercase;
@@ -60,7 +62,7 @@
 }
 
 body {
-  font-family: 'Lato', Arial;  
+  font-family: 'Lato', Arial;
 }
 
 h1, h2, h3 {
@@ -223,7 +225,7 @@ h1, h2, h3 {
 }
 
 .content {
-  padding: 40px 20px;
+  padding: 20px;
   background: #fff;
 }
 
@@ -232,6 +234,18 @@ h1, h2, h3 {
   background: @navbar-default-bg;
   color: #fff;
   padding: 40px 0;
+}
+
+.aksi {
+  .dukungan {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    div {
+      .heading-make;
+      font-size: 2em;
+    }
+  }
 }
 
 .split-kementrian {
@@ -251,7 +265,7 @@ h1, h2, h3 {
   .img-block;
 }
 
-.img-kemendiknas {
+.img-kemendikbud {
   .logo-make(40px, inherit, '../img/kementrian/kemendiknas.png');
   .img-block;
 }
@@ -261,11 +275,19 @@ h1, h2, h3 {
 }
 
 .tutorial {
-  padding: 40px;
+
   p {
-    margin-top: 50px;
+    margin-top: 10px;
     font-weight: bold;
     font-size: 1.1em;
+  }
+
+  .item-tutorial {
+    margin: 20px 0;
+  }
+
+  img {
+    width: 100%;
   }
 }
 
@@ -312,7 +334,7 @@ h1, h2, h3 {
   .indikasi(#ddd);
 }
 
-@overview-height: 350px;
+@overview-height: 400px;
 
 .nopadding {
   padding: 0 !important;
@@ -323,7 +345,6 @@ h1, h2, h3 {
   margin-top: 10px;
   .row.items {
     margin: 0;
-    margin-bottom: 20px;
   }
   .item-menteri {
     margin-bottom: 20px;
@@ -354,6 +375,31 @@ h1, h2, h3 {
           .heading-make;
           font-size: 2em;
         }
+        .vote-result {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          min-height: 90px;
+          width: 100%;
+          background: @body-bg;
+          .block {
+            color: #000;
+            float: left;
+            width: 50%;
+            padding: 10px;
+            min-height: inherit;
+            text-align: center;
+            .hint {
+              color: #888;
+            }
+            i {
+              font-size: 16px;
+            }
+          }
+          .block:nth-child(1) {
+            background: darken(@body-bg, 10%)
+          }
+        }
       }
     }
   }
@@ -367,6 +413,17 @@ h1, h2, h3 {
   li > a {
     .content-make;
   }
+}
+
+.btn-lg {
+  border-radius: 0;
+}
+
+.btn-full {
+  .heading-make;
+  color: #999;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 /* Kandidat Show */
@@ -404,22 +461,63 @@ h1, h2, h3 {
   }
 }
 
-.content.list {
-  padding-top: 20px;
-}
-
 .center {
   text-align: center;
 }
+
 /* Rekam Jejak */
-/*******************************************
-EDUCATION
-*******************************************/
 #education{
   margin-top: 20px;
   position: relative;
   padding: 1em 0;
   list-style: none;
+  li{
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    float: left;
+  }
+  .year{
+    width: 15%;
+    background: #fff;
+    padding: 10px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 10px;
+  }
+  .description {
+    width: 80%;
+    display: inline-block;
+    background: #eee;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 10px 10px 0 10px;
+    border-bottom: 1px solid #ddd;
+    h3 {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1em;
+      margin-top: 5px;
+      padding: 0;
+    }
+  }
+  .description:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: -16px;
+    height: 0;
+    width: 0;
+    border: solid transparent;
+    border-right-color: #eee;
+    border-width: 8px;
+    pointer-events: none;
+  }
 }
 #education:before {
   width: 5px;
@@ -438,52 +536,4 @@ EDUCATION
   background: linear-gradient(to bottom,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
 }
-#education li{
-  width: 100%;
-  z-index: 2;
-  position: relative;
-  float: left;
-}
-#education .year{
-  width: 15%;
-  background: #fff;
-  padding: 10px;
-  font-weight: 700;
-  display: inline-block;
-  line-height: 10px;
-}
-#education .description{
-  width: 80%;
-  display: inline-block;
-  background: #eee;
-  margin-bottom: 10px;
-  position: relative;
-  padding: 10px 10px 0 10px;
-  border-bottom: 1px solid #ddd;
-}
-#education .description:after {
-  content: '';
-  position: absolute;
-  top: 15px;
-  right: 0;
-  left: -16px;
-  height: 0;
-  width: 0;
-  border: solid transparent;
-  border-right-color: #eee;
-  border-width: 8px;
-  pointer-events: none;
-}
-#education .description h3{
-  font-size: 1.2em;
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-}
 
-
-#education .description p{
-  font-size: 1em;
-  margin-top: 5px;
-  padding: 0;
-}

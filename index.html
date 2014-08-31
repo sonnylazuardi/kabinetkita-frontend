@@ -24,6 +24,7 @@
   
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/list.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
@@ -47,114 +48,10 @@
 						<div class="logo-kandidat"></div> Kandidat
 					</a>
 				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<li>
+					<a href="#">
 						<div class="logo-kementrian"></div> Kementrian
 					</a>
-					<ul class="dropdown-menu kementrian">
-						<li>
-							<a href="#">Kementrian Dalam Negeri</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Luar Negeri</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pertahanan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Hukum Dan Hak Asasi Manusia</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Keuangan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Energi Dan Sumber Daya Mineral</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Perindustrian</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Perdagangan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pertanian</a>
-						</li>
-						<li>
-							<a href="#">Kementrain Perhutanan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Perhubungan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Kelautan Dan Perikanan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Tenaga Kerja Dan Transmigrasi</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pekerjaan Umum</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Kesehatan</a>
-						</li>
-						<li>
-							<a href="#kemendiknas">Kementrian Pendidikan Dan Kebudayaan</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Sosial</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Agama</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pariwisata Dan Ekonomi Kreatif</a>
-						</li>
-						<li>
-							<a href="#kominfo">Kementrian Komunikasi Dan Informatika</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Sekretaris Negara</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Riset Dan Teknologi</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Koperasi Dan Usaha Kecil Menengah</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Lingkungan Hidup</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pemberdayaan Perempuan Dan Perlindungan Anak</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pendayagunaan Aparatur Negara Dan Reformasi Birokrasi</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pembangunan Daerah Tertinggal</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Perencanaan Pembangunan Nasional</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Badan Usaha Milik Negara</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Perumahan Rakyat</a>
-						</li>
-						<li>
-							<a href="#">Kementrian Pemuda Dan Olahraga</a>
-						</li>
-						<li>
-							<a href="#">Menko Polhukam</a>
-						</li>
-						<li>
-							<a href="#">Menko Perekonomian</a>
-						</li>
-						<li>
-							<a href="#">Menko Kesejahteraan Rakyat</a>
-						</li>
-					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -197,43 +94,100 @@
 	</div>
 </div>
 
+<!-- body has the class "cbp-spmenu-push" -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+	<div class="box-menu">
+		<a id="showLeft"><i class="fa fa-bars fa-lg"></i></a>
+	</div>
+    <form>
+    	<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control form-tall search" placeholder="Cari Kementrian">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+			</div>
+		</div>
+    </form>
+    <ul class="list-kementrian list-unstyled list">
+	    <li><a class="nama-kementrian" href="#">Kementrian Dalam Negeri</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Luar Negeri</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pertahanan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Hukum Dan Hak Asasi Manusia</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Keuangan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Energi Dan Sumber Daya Mineral</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Perindustrian</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Perdagangan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pertanian</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrain Perhutanan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Perhubungan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Kelautan Dan Perikanan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Tenaga Kerja Dan Transmigrasi</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pekerjaan Umum</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Kesehatan</a></li>
+		<li><a class="nama-kementrian" href="#kemendikbud">Kementrian Pendidikan Dan Kebudayaan</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Sosial</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Agama</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pariwisata Dan Ekonomi Kreatif</a></li>
+		<li><a class="nama-kementrian" href="#kominfo">Kementrian Komunikasi Dan Informatika</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Sekretaris Negara</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Riset Dan Teknologi</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Koperasi Dan Usaha Kecil Menengah</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Lingkungan Hidup</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pemberdayaan Perempuan Dan Perlindungan Anak</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pendayagunaan Aparatur Negara Dan Reformasi Birokrasi</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pembangunan Daerah Tertinggal</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Perencanaan Pembangunan Nasional</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Badan Usaha Milik Negara</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Perumahan Rakyat</a></li>
+		<li><a class="nama-kementrian" href="#">Kementrian Pemuda Dan Olahraga</a></li>
+		<li><a class="nama-kementrian" href="#">Menko Polhukam</a></li>
+		<li><a class="nama-kementrian" href="#">Menko Perekonomian</a></li>
+		<li><a class="nama-kementrian" href="#">Menko Kesejahteraan Rakyat</a></li>
+	</ul>
+</nav>
+
+
+
 <div class="container">
 	<div class="content">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tutorial">
 					<div class="row">
-						<div class="col-md-3 col-md-offset-1">
-							<img src="img/cari.png" alt="">
+						<div class="col-md-6 item-tutorial">
+							<div class="row">
+								<div class="col-xs-4">
+									<img src="img/cari.png" alt="">
+								</div>
+								<div class="col-xs-8">
+									<p>
+										Lihat indikasi bersih atau tidaknya kandidat dari kasus-kasus dengan color meter pada bingkai foto kandidat
+									</p>
+									<div>
+										<span class="indikasi-contoh-1"></span> 
+										<span class="indikasi-contoh-2"></span> 
+										<span class="indikasi-contoh-3"></span> 
+										<span class="indikasi-contoh-4"></span> 
+										Indikasi color meter dari banyak kasus hingga bersih dari kasus
+									</div>
+								</div>
+							</div>	
 						</div>
-						<div class="col-md-7">
-							<p>
-								Lihat indikasi bersih atau tidaknya kandidat dari kasus-kasus dengan color meter pada bingkai foto kandidat
-							</p>
-							<div>
-								<span class="indikasi-contoh-1"></span> 
-								<span class="indikasi-contoh-2"></span> 
-								<span class="indikasi-contoh-3"></span> 
-								<span class="indikasi-contoh-4"></span> 
-								Indikasi color meter dari banyak kasus hingga bersih dari kasus
+						<div class="col-md-6 item-tutorial">
+							<div class="row">
+								<div class="col-xs-4">
+									<img src="img/nominate.png" alt="">
+								</div>
+								<div class="col-xs-8">
+									<p>
+										Berpartisipasilah untuk menominasikan kandidat yang cocok untuk mengisi Kementrian Republik Indonesia
+									</p>
+								</div>
 							</div>
-						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class="col-md-3 col-md-offset-1">
-							<img src="img/nominate.png" alt="">
-						</div>
-						<div class="col-md-7">
-							<p>
-								Berpartisipasilah untuk menominasikan kandidat yang cocok untuk mengisi Kementrian Republik Indonesia
-							</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="split-kementrian" id="kominfo"></div>
-				<div class="drop-kementrian">
+				<div class="drop-kementrian" id="kominfo">
 					<div class="img-kominfo"></div> Kementrian Komunikasi dan Informatika 
 					<span class="select-kementrian">
 						<div class="dropdown pull-right">
@@ -258,10 +212,44 @@
 										<div>Usia: 45 tahun</div>
 										<div>Pekerjaan: Rektor</div>
 										<div>Prestasi: ASEAN Student Award 2005</div>
+										<div>Alasan: Anies adalah pemimpin yang jujur dan berani melakukan perubahan</div>
 									</div>
 									<div class="aksi">
-										<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-										<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+										<div class="dukungan">
+											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+										</div>
+										<div class="dukungan">
+											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+										</div>
+									</div>
+									
+									<div class="vote-result">
+										<div class="block">
+											<div class="hint">
+												dukungan umum
+											</div>
+											<div class="aksi">
+												<div class="dukungan">
+													<div>58 <i class="fa fa-thumbs-up"></i></div>
+												</div>
+												<div class="dukungan">
+													<div>10 <i class="fa fa-thumbs-down"></i></div>
+												</div>
+											</div>
+										</div>
+										<div class="block">
+											<div class="hint">
+												dukungan pelajar
+											</div>
+											<div class="aksi">
+												<div class="dukungan">
+													<div>58 <i class="fa fa-thumbs-up"></i></div>
+												</div>
+												<div class="dukungan">
+													<div>10 <i class="fa fa-thumbs-down"></i></div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -280,9 +268,16 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -299,9 +294,16 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -318,9 +320,16 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -337,24 +346,30 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<a href="#" class="btn btn-default btn-lg" style="width:100%">Load More...</a>
-							</div>
-						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="#" class="btn btn-default btn-lg btn-full">Kandidat Lain...</a>
 					</div>
 				</div>
 
-				<div class="split-kementrian" id="kemendiknas"></div>
-				<div class="drop-kementrian">
-					<div class="img-kemendiknas"></div> Kementrian Pendidikan dan Kebudayaan 
+				<div class="drop-kementrian" id="kemendikbud">
+					<div class="img-kemendikbud"></div> Kementrian Pendidikan dan Kebudayaan 
 					<span class="select-kementrian">
 						<div class="dropdown pull-right">
 							<a data-toggle="dropdown" href="#"><i class="fa fa-chevron-circle-down fa-lg"></i></a>
@@ -378,10 +393,44 @@
 										<div>Usia: 45 tahun</div>
 										<div>Pekerjaan: Rektor</div>
 										<div>Prestasi: ASEAN Student Award 2005</div>
+										<div>Alasan: Anies adalah pemimpin yang jujur dan berani melakukan perubahan</div>
 									</div>
 									<div class="aksi">
-										<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-										<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+										<div class="dukungan">
+											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+										</div>
+										<div class="dukungan">
+											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+										</div>
+									</div>
+									
+									<div class="vote-result">
+										<div class="block">
+											<div class="hint">
+												dukungan umum
+											</div>
+											<div class="aksi">
+												<div class="dukungan">
+													<div>58 <i class="fa fa-thumbs-up"></i></div>
+												</div>
+												<div class="dukungan">
+													<div>10 <i class="fa fa-thumbs-down"></i></div>
+												</div>
+											</div>
+										</div>
+										<div class="block">
+											<div class="hint">
+												dukungan pelajar
+											</div>
+											<div class="aksi">
+												<div class="dukungan">
+													<div>58 <i class="fa fa-thumbs-up"></i></div>
+												</div>
+												<div class="dukungan">
+													<div>10 <i class="fa fa-thumbs-down"></i></div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -400,9 +449,16 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -419,9 +475,16 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -438,9 +501,16 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -457,13 +527,25 @@
 											<div>Prestasi: ASEAN Student Award 2005</div>
 										</div>
 										<div class="aksi">
-											<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a> 
-											<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											<div class="dukungan">
+												<div>58</div>
+												<a href="#" class="btn btn-success"><i class="fa fa-thumbs-up"></i> dukung</a>
+											</div>
+											<div class="dukungan">
+												<div>10</div>
+												<a href="#" class="btn btn-danger"><i class="fa fa-thumbs-down"></i> tolak</a>
+											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="#" class="btn btn-default btn-lg btn-full">Kandidat Lain...</a>
 					</div>
 				</div>
 			</div>
