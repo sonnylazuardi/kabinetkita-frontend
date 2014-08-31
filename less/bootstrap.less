@@ -23,26 +23,26 @@
 @import "input-groups.less";
 @import "navs.less";
 @import "navbar.less";
-@import "breadcrumbs.less";
+// @import "breadcrumbs.less";
 @import "pagination.less";
 @import "pager.less";
 @import "labels.less";
 @import "badges.less";
-@import "jumbotron.less";
+// @import "jumbotron.less";
 @import "thumbnails.less";
 @import "alerts.less";
 @import "progress-bars.less";
 @import "media.less";
-@import "list-group.less";
-@import "panels.less";
-@import "wells.less";
-@import "close.less";
+// @import "list-group.less";
+// @import "panels.less";
+// @import "wells.less";
+// @import "close.less";
 
 // Components w/ JavaScript
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
-@import "carousel.less";
+// @import "modals.less";
+// @import "tooltip.less";
+// @import "popovers.less";
+// @import "carousel.less";
 
 // Utility classes
 @import "utilities.less";
@@ -54,6 +54,12 @@
   font-family: 'MontserratFont', Arial;
   text-transform: uppercase;
   font-weight: bolder;
+}
+
+.content-make {
+  font-family: 'Lato', Arial;
+  text-transform: none;
+  font-weight: normal;
 }
 
 .logo-make(@size, @margin, @image) {
@@ -235,6 +241,22 @@ h1, h2, h3 {
       }
     }
   }
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: inherit;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.dropdown-menu {
+  li > a {
+    width: 100%;
+    text-overflow: ellipsis;  
+    overflow-x: hidden;
+  }
 }
 
 .heading {
@@ -341,14 +363,8 @@ h1, h2, h3 {
 @overview-height: 350px;
 
 .nopadding {
-   padding: 0 !important;
-   margin: 0 !important;
-}
-
-.dropdown-menu {
-  position: absolute;
-  right: 0;
-  left: inherit;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .list-menteri {
@@ -365,9 +381,6 @@ h1, h2, h3 {
     .judul {
       .heading-make;
       font-size: 1.3em;
-    }
-    .deskripsi {
-      margin-bottom: 10px;
     }
     .img-small-menteri {
       width: 100%;
@@ -391,4 +404,123 @@ h1, h2, h3 {
       }
     }
   }
+}
+
+.deskripsi {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu.kementrian {
+  li > a {
+    .content-make;
+  }
+}
+
+/* Kandidat Show */
+.foto {
+  text-align: right;
+  margin: 20px 0;
+  img {
+    width: 100%;
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+  }
+}
+.spaced {
+  li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @body-bg;
+  }
+}
+
+.table.profil {
+  tr td:nth-child(1) {
+    background: @body-bg;
+    font-weight: bolder;
+    text-align: right;
+  }
+}
+
+.content.profil {
+  h2 {
+    background: @body-bg;
+    padding: 10px 20px;
+    margin-top: 0;
+  }
+}
+/* Rekam Jejak */
+/*******************************************
+EDUCATION
+*******************************************/
+#education{
+  margin-top: 20px;
+  position: relative;
+  padding: 1em 0;
+  list-style: none;
+}
+#education:before {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 25px;
+  top: 0;
+  content: ' ';
+  display: block;
+  background: #ec7263;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #ec7263 7%, #ec7263 89%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#ec7263), color-stop(89%,#ec7263), color-stop(100%,#ffffff));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+#education li{
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  float: left;
+}
+#education .year{
+  width: 15%;
+  background: #fff;
+  padding: 10px;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 10px;
+}
+#education .description{
+  width: 80%;
+  display: inline-block;
+  background: #eee;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+#education .description:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: -16px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #eee;
+  border-width: 8px;
+  pointer-events: none;
+}
+#education .description h3{
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+#education .description p{
+  font-size: 1em;
+  margin-top: 5px;
+  padding: 0;
 }
