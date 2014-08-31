@@ -31,5 +31,7 @@ $(document).on('ready', function() {
 	};
 
 	var hackerList = new List('cbp-spmenu-s1', options);
+
+	$('#myModal').modal();
 });
 
