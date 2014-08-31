@@ -130,6 +130,8 @@ h1, h2, h3 {
 
 .logo-kita {
   background: url('../img/kabinetkita.png') no-repeat;
+  max-width: 100%;
+  background-size: contain;
   width: 369px;
   height: 60px;
 }
@@ -266,9 +268,9 @@ h1, h2, h3 {
 
 .list-menteri {
   margin-top: 10px;
-  .items {
-    display: block;
-    min-height: 380px;
+  .row.items {
+    margin: 0;
+    margin-bottom: 20px;
   }
   .item-menteri {
     .wrap-info {
