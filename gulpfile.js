@@ -4,12 +4,12 @@ var gulp = require('gulp'),
     path = require('path');
 
 gulp.task('build-less', function(){
-    return gulp.src('./less/bootstrap.less')
+    return gulp.src('./style.less')
         .pipe(less())
         .pipe(minifyCSS())
         .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
-  	gulp.watch('./less/*.less', ['build-less']);
+  	gulp.watch('./style.less', ['build-less']);
 });
