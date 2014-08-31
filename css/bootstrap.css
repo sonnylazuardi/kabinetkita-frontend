@@ -6010,30 +6010,35 @@ h3 {
   width: 125px;
   height: 125px;
   margin: 0;
+  background-size: contain;
 }
 .logo-home {
   background: url('../img/home.png') no-repeat;
   width: 48px;
   height: 48px;
   margin: 0 auto;
+  background-size: contain;
 }
 .logo-kementrian {
   background: url('../img/kementrian.png') no-repeat;
   width: 48px;
   height: 48px;
   margin: 0 auto;
+  background-size: contain;
 }
 .logo-kandidat {
   background: url('../img/kandidat.png') no-repeat;
   width: 48px;
   height: 48px;
   margin: 0 auto;
+  background-size: contain;
 }
 .logo-login {
   background: url('../img/login.png') no-repeat;
   width: 48px;
   height: 48px;
   margin: 0 auto;
+  background-size: contain;
 }
 .logo-kita {
   background: url('../img/kabinetkita.png') no-repeat;
@@ -6056,14 +6061,79 @@ h3 {
 }
 .navbar-default li > a div {
   float: left;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-top: -10px;
 }
 .navbar-default .navbar-brand {
   padding: 0;
 }
+@media (max-width: 990px) {
+  .navbar-default li > a > div {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: -5px;
+  }
+}
+.small-navbar {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  margin-top: -7px;
+}
+.navbar-transition {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
 @media (max-width: 768px) {
   .navbar-default li > a > div {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    margin-top: -7px;
+  }
+}
+.navbar-fixed-top.shrink {
+  padding: 0px;
+  min-height: 60px;
+}
+.navbar-fixed-top.shrink .logo {
+  height: 60px;
+}
+.navbar-fixed-top.shrink .navbar-toggle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top .logo {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+  }
+  .navbar-fixed-top .navbar-nav > li > a {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+  }
+  .navbar-fixed-top .navbar-nav > li > a > div {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+  }
+  .navbar-fixed-top.shrink {
+    padding: 0px;
+    min-height: 30px;
+  }
+  .navbar-fixed-top.shrink .logo {
+    height: 60px;
+  }
+  .navbar-fixed-top.shrink .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .navbar-fixed-top.shrink .navbar-nav > li > a > div {
     width: 35px;
     height: 35px;
     background-size: contain;
@@ -6074,6 +6144,7 @@ h3 {
   background: #d41e4e;
   color: #fff;
   padding-top: 50px;
+  padding-top: 150px;
 }
 .box {
   padding: 20px;
@@ -6090,6 +6161,9 @@ h3 {
   color: #fff;
   padding: 40px 0;
 }
+.split-kementrian {
+  height: 60px;
+}
 .drop-kementrian {
   padding: 20px;
   font-family: 'MontserratFont', Arial;
@@ -6101,6 +6175,16 @@ h3 {
 }
 .img-kominfo {
   background: url('../img/kementrian/kominfo.png') no-repeat;
+  width: 40px;
+  height: 40px;
+  margin: inherit;
+  background-size: contain;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.img-kemendiknas {
+  background: url('../img/kementrian/kemendiknas.png') no-repeat;
   width: 40px;
   height: 40px;
   margin: inherit;
@@ -6169,6 +6253,11 @@ h3 {
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
+}
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: inherit;
 }
 .list-menteri {
   margin-top: 10px;

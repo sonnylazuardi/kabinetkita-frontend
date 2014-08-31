@@ -61,6 +61,7 @@
   width: @size;
   height: @size;
   margin: @margin;
+  background-size: contain;
 }
 
 .font-make(@name, @size) {
@@ -149,7 +150,7 @@ h1, h2, h3 {
 
     div {
       float: left;
-      margin-right: 10px; 
+      margin-right: 5px; 
       margin-top: -10px;    
     }
   }
@@ -159,12 +160,80 @@ h1, h2, h3 {
   }
 }
 
+@media (max-width: 990px) {
+  .navbar-default {
+    li > a {
+      > div {
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px; 
+        margin-top: -5px;    
+      }
+    }
+  }
+}
+
+.small-navbar {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  margin-top: -7px;
+}
+
+.navbar-transition {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
 @media (max-width: 768px) {
   .navbar-default li > a > div {
-    width: 35px;
-    height: 35px;
-    background-size: contain;
-    margin-top: -7px;
+    .small-navbar;   
+  }
+}
+
+.navbar-fixed-top.shrink {
+  padding: 0px;
+  min-height: 60px;
+
+  .logo {
+    height: 60px;
+  }
+
+  .navbar-toggle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-fixed-top  {
+    .logo {
+      .navbar-transition;
+    }
+    .navbar-nav > li > a {
+      .navbar-transition;
+      > div {
+        .navbar-transition;
+      }
+    }
+  }
+  .navbar-fixed-top.shrink {
+    padding: 0px;
+    min-height: 30px;
+
+    .logo {
+      height: 60px;
+    }
+    .navbar-nav > li > a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      > div {
+        .small-navbar;
+      }
+    }
   }
 }
 
@@ -172,6 +241,7 @@ h1, h2, h3 {
   background: @navbar-default-bg;
   color: #fff;
   padding-top: 50px;
+  padding-top: 150px;
 }
 
 .box {
@@ -190,6 +260,10 @@ h1, h2, h3 {
   padding: 40px 0;
 }
 
+.split-kementrian {
+  height: 60px;
+}
+
 .drop-kementrian {
   padding: 20px;
   .heading-make;
@@ -200,6 +274,11 @@ h1, h2, h3 {
 
 .img-kominfo {
   .logo-make(40px, inherit, '../img/kementrian/kominfo.png');
+  .img-block;
+}
+
+.img-kemendiknas {
+  .logo-make(40px, inherit, '../img/kementrian/kemendiknas.png');
   .img-block;
 }
 
@@ -264,6 +343,12 @@ h1, h2, h3 {
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: inherit;
 }
 
 .list-menteri {

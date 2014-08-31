@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
 			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
@@ -48,10 +48,18 @@
 						<div class="logo-kandidat"></div> Kandidat
 					</a>
 				</li>
-				<li>
-					<a href="#">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<div class="logo-kementrian"></div> Kementrian
 					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#kominfo">Kominfo</a>
+						</li>
+						<li>
+							<a href="#kemendiknas">Kemendikbud</a>
+						</li>
+					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -129,17 +137,15 @@
 					</div>
 				</div>
 
+				<div class="split-kementrian" id="kominfo"></div>
 				<div class="drop-kementrian">
 					<div class="img-kominfo"></div> Kementrian Komunikasi dan Informatika 
 					<span class="select-kementrian">
 						<div class="dropdown">
 							<a data-toggle="dropdown" href="#"><i class="fa fa-chevron-circle-down fa-lg"></i></a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="Testing">
+							<ul class="dropdown-menu" role="menu" aria-labelledby="Share">
 								<li>
-									<a href="#">Testing</a>
-								</li>
-								<li>
-									<a href="#">Yuhu</a>
+									<a href="#">Share</a>
 								</li>
 							</ul>
 						</div>
@@ -246,17 +252,15 @@
 					</div>
 				</div>
 
+				<div class="split-kementrian" id="kemendiknas"></div>
 				<div class="drop-kementrian">
-					<div class="img-kominfo"></div> Kementrian Komunikasi dan Informatika 
+					<div class="img-kemendiknas"></div> Kementrian Pendidikan dan Kebudayaan 
 					<span class="select-kementrian">
 						<div class="dropdown">
 							<a data-toggle="dropdown" href="#"><i class="fa fa-chevron-circle-down fa-lg"></i></a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="Testing">
+							<ul class="dropdown-menu" role="menu" aria-labelledby="Share">
 								<li>
-									<a href="#">Testing</a>
-								</li>
-								<li>
-									<a href="#">Yuhu</a>
+									<a href="#">Share</a>
 								</li>
 							</ul>
 						</div>
