@@ -30,11 +30,13 @@
   font-weight: @size;
 }
 
-.img-block {
-  background-size: contain;
+.img-block(@size) {
+  // background-size: contain;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
+  width: @size;
+  height: @size;
 }
 /* End Functions */
 
@@ -290,14 +292,12 @@ h1, h2, h3 {
   background: @body-bg;
 }
 
-.img-kominfo {
-  .logo-make(40px, inherit, '../img/kementrian/kominfo.png');
-  .img-block;
-}
-
-.img-kemendikbud {
-  .logo-make(40px, inherit, '../img/kementrian/kemendiknas.png');
-  .img-block;
+.img-logo {
+  .img-block(40px);
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .select-kementrian {
