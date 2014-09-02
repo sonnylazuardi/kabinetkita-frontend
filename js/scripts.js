@@ -29,9 +29,10 @@ $(document).on('ready', function() {
 	var options = {
 	    valueNames: [ 'nama-kementrian' ]
 	};
-
-	var hackerList = new List('cbp-spmenu-s1', options);
+	// var hackerList = new List('cbp-spmenu-s1', options);
 
 	$('#myModal').modal();
+
+	$("#slider-umur").slider({});
 });
 
